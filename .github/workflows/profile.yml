@@ -33,6 +33,10 @@ jobs:
       - name: 修复内置令牌的公开获星数查询兼容性
         run: python3 .github/scripts/patch_stats_action.py
 
+      - name: 确定当年提交统计范围
+        id: calendar
+        run: echo "year=$(date -u +%Y)" >> "$GITHUB_OUTPUT"
+
       - name: 生成深色公开活动统计
         uses: ./.stats-action
         with:
@@ -41,7 +45,7 @@ jobs:
           fail_on_error: 'true'
           token: ${{ secrets.GITHUB_TOKEN }}
           path: assets/generated/stats-dark.svg
-          options: '{"username":"qihai-coding","locale":"cn","hide_rank":true,"show_icons":true,"include_all_commits":false,"custom_title":"公开活动","bg_color":"0D1424","title_color":"62E8E4","text_color":"CBD5E1","icon_color":"B7A3FF","border_color":"263653","border_radius":16,"card_width":420,"disable_animations":true}'
+          options: '{"username":"qihai-coding","locale":"cn","hide_rank":true,"hide":"contribs","show_icons":true,"include_all_commits":false,"commits_year":"${{ steps.calendar.outputs.year }}","custom_title":"公开活动","bg_color":"0D1424","title_color":"62E8E4","text_color":"CBD5E1","icon_color":"B7A3FF","border_color":"263653","border_radius":16,"card_width":420,"disable_animations":true}'
 
       - name: 生成浅色公开活动统计
         uses: ./.stats-action
@@ -51,7 +55,7 @@ jobs:
           fail_on_error: 'true'
           token: ${{ secrets.GITHUB_TOKEN }}
           path: assets/generated/stats-light.svg
-          options: '{"username":"qihai-coding","locale":"cn","hide_rank":true,"show_icons":true,"include_all_commits":false,"custom_title":"公开活动","bg_color":"F6F8FF","title_color":"087E8B","text_color":"334155","icon_color":"7652C8","border_color":"D6DDED","border_radius":16,"card_width":420,"disable_animations":true}'
+          options: '{"username":"qihai-coding","locale":"cn","hide_rank":true,"hide":"contribs","show_icons":true,"include_all_commits":false,"commits_year":"${{ steps.calendar.outputs.year }}","custom_title":"公开活动","bg_color":"F6F8FF","title_color":"087E8B","text_color":"334155","icon_color":"7652C8","border_color":"D6DDED","border_radius":16,"card_width":420,"disable_animations":true}'
 
       - name: 生成深色仓库语言分布
         uses: ./.stats-action

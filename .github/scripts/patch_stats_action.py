@@ -20,6 +20,18 @@ patch = r'''
     .replace(connection, "stargazerCount")
     .replaceAll(".stargazers.totalCount", ".stargazerCount");
   await writeFile(statsPath, fixedStats, "utf8");
+  const translationsPath = path.join(path.dirname(modulePath), "translations.js");
+  let translations = await readFile(translationsPath, "utf8");
+  for (const [before, after] of [
+    ['cn: "获标星数"', 'cn: "公开获星数"'],
+    ['cn: "累计提交总数"', 'cn: "公开提交数"'],
+    ['cn: "发起的 PR 总数"', 'cn: "合并请求数"'],
+    ['cn: "提出的 issue 总数"', 'cn: "议题数"'],
+  ]) {
+    if (!translations.includes(before)) throw new Error("上游中文标签已改变，请重新核对。");
+    translations = translations.replace(before, after);
+  }
+  await writeFile(translationsPath, translations, "utf8");
 '''
 if source.count(old_import) != 1 or source.count(old_resolve) != 1:
     raise RuntimeError("上游组件结构已改变，停止生成以免应用错误补丁。")
