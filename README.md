@@ -8,7 +8,7 @@
 
 <p align="center"><b>摸鱼归摸鱼，项目还是要做完的。</b></p>
 <p align="center">在游戏世界里打磨体验，在前后端之间连接想法。<br>这里记录我的公开项目，以及它们一点点长大的过程。</p>
-<p align="center"><a href="#正在构建">正在构建</a> · <a href="#技术足迹">技术足迹</a> · <a href="#公开活动">公开活动</a> · <a href="#贡献轨迹">贡献轨迹</a></p>
+<p align="center"><a href="#user-content-正在构建">正在构建</a> · <a href="#user-content-技术足迹">技术足迹</a> · <a href="#user-content-公开活动">公开活动</a> · <a href="#user-content-贡献轨迹">贡献轨迹</a></p>
 
 ## 正在构建
 
@@ -54,15 +54,15 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/generated/stats-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/generated/stats-light.svg">
-  <img src="assets/generated/stats-dark.svg" width="420" alt="公开活动统计：获星、当年提交、合并请求和议题数量。">
+  <img src="assets/generated/stats-dark.svg" width="400" alt="公开活动统计：获星、当年提交、合并请求和议题数量。">
 </picture>
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/generated/languages-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/generated/languages-light.svg">
-  <img src="assets/generated/languages-dark.svg" width="420" alt="自有公开仓库的代码语言分布，按代码量统计。">
+  <img src="assets/generated/languages-dark.svg" width="400" alt="自有公开仓库的主要代码语言分布，展示代码量前六项的相对占比。">
 </picture>
 
-<sub>来自公开可见的数据，提交数按当年统计。语言占比反映仓库代码分布，不代表熟练程度；已排除本主页仓库。</sub>
+<sub>来自公开可见的数据，提交数按当年统计。语言图展示代码量前六项的相对占比，不代表熟练程度；已排除本主页仓库。</sub>
 
 ## 贡献轨迹
 
