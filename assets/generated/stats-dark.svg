@@ -9,7 +9,7 @@
         aria-labelledby="descId"
       >
         <title id="titleId">&#20844;&#24320;&#27963;&#21160;, Rank: C</title>
-        <desc id="descId">公开获星数: 3, 公开提交数  (2026) : 8, 合并请求数: 0, 议题数: 0</desc>
+        <desc id="descId">公开获星数: 3, 公开提交数  (2026) : 10, 合并请求数: 0, 议题数: 0</desc>
         <style>
           .header {
             font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
@@ -73,7 +73,7 @@
         stroke-dashoffset: 251.32741228718345;
       }
       to {
-        stroke-dashoffset: 245.66651056474723;
+        stroke-dashoffset: 245.43995875596764;
       }
     }
   
@@ -166,7 +166,7 @@
         x="174.01"
         y="12.5"
         data-testid="commits"
-      >8</text>
+      >10</text>
     </g>
   </g><g transform="translate(0, 50)">
     <g class="stagger" style="animation-delay: 750ms" transform="translate(25, 0)">
