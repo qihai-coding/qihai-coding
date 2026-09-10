@@ -1,0 +1,78 @@
+name: 更新主页动态素材
+
+on:
+  schedule:
+    - cron: '17 1 * * *' # 每天北京时间 09:17，实际启动可能排队。
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-assets
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: 检出主页仓库
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          ref: main
+
+      - name: 生成深色公开活动统计
+        uses: stats-organization/github-readme-stats-action@e856fc8de9d7729b463c468911e232cfbdc3d55e # v2.0.2
+        with:
+          card: stats
+          core_version: '2.1.3'
+          fail_on_error: 'true'
+          token: ${{ secrets.GITHUB_TOKEN }}
+          path: assets/generated/stats-dark.svg
+          options: '{"username":"qihai-coding","locale":"cn","hide_rank":true,"show_icons":true,"include_all_commits":false,"custom_title":"公开活动","bg_color":"0D1424","title_color":"62E8E4","text_color":"CBD5E1","icon_color":"B7A3FF","border_color":"263653","border_radius":16,"card_width":420,"disable_animations":true}'
+
+      - name: 生成浅色公开活动统计
+        uses: stats-organization/github-readme-stats-action@e856fc8de9d7729b463c468911e232cfbdc3d55e # v2.0.2
+        with:
+          card: stats
+          core_version: '2.1.3'
+          fail_on_error: 'true'
+          token: ${{ secrets.GITHUB_TOKEN }}
+          path: assets/generated/stats-light.svg
+          options: '{"username":"qihai-coding","locale":"cn","hide_rank":true,"show_icons":true,"include_all_commits":false,"custom_title":"公开活动","bg_color":"F6F8FF","title_color":"087E8B","text_color":"334155","icon_color":"7652C8","border_color":"D6DDED","border_radius":16,"card_width":420,"disable_animations":true}'
+
+      - name: 生成深色仓库语言分布
+        uses: stats-organization/github-readme-stats-action@e856fc8de9d7729b463c468911e232cfbdc3d55e # v2.0.2
+        with:
+          card: top-langs
+          core_version: '2.1.3'
+          fail_on_error: 'true'
+          token: ${{ secrets.GITHUB_TOKEN }}
+          path: assets/generated/languages-dark.svg
+          options: '{"username":"qihai-coding","locale":"cn","layout":"compact","langs_count":6,"exclude_repo":"qihai-coding","custom_title":"仓库代码分布","bg_color":"0D1424","title_color":"62E8E4","text_color":"CBD5E1","border_color":"263653","border_radius":16,"card_width":420,"disable_animations":true}'
+
+      - name: 生成浅色仓库语言分布
+        uses: stats-organization/github-readme-stats-action@e856fc8de9d7729b463c468911e232cfbdc3d55e # v2.0.2
+        with:
+          card: top-langs
+          core_version: '2.1.3'
+          fail_on_error: 'true'
+          token: ${{ secrets.GITHUB_TOKEN }}
+          path: assets/generated/languages-light.svg
+          options: '{"username":"qihai-coding","locale":"cn","layout":"compact","langs_count":6,"exclude_repo":"qihai-coding","custom_title":"仓库代码分布","bg_color":"F6F8FF","title_color":"087E8B","text_color":"334155","border_color":"D6DDED","border_radius":16,"card_width":420,"disable_animations":true}'
+
+      - name: 生成真实贡献贪吃蛇
+        uses: Platane/snk/svg-only@d8f6715049803e982ee5ff501b6b9b7d5deeb09b # v3.5.0
+        with:
+          github_user_name: qihai-coding
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          outputs: |
+            assets/generated/snake-dark.svg?palette=github-dark&color_snake=#B7A3FF&color_dots=#172235,#17494F,#208889,#39C3BC,#62E8E4
+            assets/generated/snake-light.svg?palette=github-light&color_snake=#7652C8&color_dots=#E8EDF6,#B9E6E2,#73CBC5,#2CA59E,#087E8B
+
+      - name: 验证完整素材与发布保护
+        run: python3 .github/scripts/check_profile.py --self-test
+
+      - name: 仅发布完整且发生变化的素材
+        run: python3 .github/scripts/check_profile.py --publish

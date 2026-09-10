@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="410" viewBox="0 0 600 410" role="img" aria-labelledby="title desc">
+  <title id="title">Jspring / qihai-coding</title>
+  <desc id="desc">霓虹终端与轨道光环。写点代码，造点世界。游戏、前端与后端开发记录。</desc>
+  <defs>
+    <linearGradient id="edge" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#087E8B"/><stop offset="0.55" stop-color="#CCD9ED"/><stop offset="1" stop-color="#7652C8"/></linearGradient>
+    <linearGradient id="ink"><stop stop-color="#087E8B"/><stop offset="1" stop-color="#7652C8"/></linearGradient>
+    <radialGradient id="bloom"><stop stop-color="#087E8B" stop-opacity=".15"/><stop offset="1" stop-color="#087E8B" stop-opacity="0"/></radialGradient>
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse"><path d="M36 0H0V36" fill="none" stroke="#C4D9E9" stroke-width=".7" opacity=".55"/></pattern>
+    <filter id="glow" x="-70%" y="-70%" width="240%" height="240%"><feGaussianBlur stdDeviation="3"/></filter>
+    <clipPath id="clip"><rect x="1" y="1" width="598" height="408" rx="24"/></clipPath>
+  </defs>
+  <style>
+    text{font-family:'Segoe UI','Microsoft YaHei','Noto Sans CJK SC',sans-serif}
+    .mono{font-family:Consolas,'SFMono-Regular',monospace}
+    .signal{animation:breathe 4s ease-in-out infinite}
+    .scan{animation:scan 7s linear infinite}
+    .orbit{animation:orbit 28s linear infinite;transform-origin:0px 0px}
+    @keyframes breathe{0%,100%{opacity:.45}50%{opacity:1}}
+    @keyframes scan{0%{transform:translateX(-250px);opacity:0}20%,75%{opacity:.65}100%{transform:translateX(600px);opacity:0}}
+    @keyframes orbit{to{transform:rotate(360deg)}}
+    @media(prefers-reduced-motion:reduce){.signal,.scan,.orbit{animation:none}.scan{display:none}}
+  </style>
+  <g clip-path="url(#clip)">
+    <rect width="600" height="410" fill="#F4F7FF"/>
+    <rect x="325" width="600" height="410" fill="url(#grid)"/>
+    <circle cx="495" cy="294" r="210" fill="url(#bloom)"/>
+    <path d="M42 63H558" stroke="#CCD9ED"/>
+    <circle cx="45" cy="37" r="4" fill="#087E8B" class="signal"/>
+    <text x="62" y="43" class="mono" fill="#536A87" font-size="16">qihai-coding / 开发记录</text>
+    <circle cx="528" cy="37" r="3" fill="#CCD9ED"/>
+    <circle cx="543" cy="37" r="3" fill="#7652C8" opacity=".65"/>
+    <circle cx="558" cy="37" r="3" fill="#087E8B" opacity=".8"/>
+    <g transform="translate(495 294) scale(0.43)" opacity=".7">
+      <circle r="147" stroke="#CCD9ED" fill="none"/>
+      <circle r="165" stroke="#CCD9ED" stroke-dasharray="2 15" fill="none"/>
+      <g class="orbit"><path d="M0 -147A147 147 0 0 1 147 0" stroke="#087E8B" stroke-width="2" fill="none"/><circle cx="147" r="5" fill="#087E8B"/></g>
+      <ellipse rx="194" ry="63" transform="rotate(-32)" stroke="url(#ink)" stroke-width="1.5" fill="none"/>
+      <ellipse rx="194" ry="63" transform="rotate(32)" stroke="url(#ink)" stroke-width="1.5" fill="none" opacity=".5"/>
+      <path d="M-77 -44L0 -88 77 -44V44L0 88 -77 44Z" stroke="url(#ink)" stroke-width="1.5" fill="#EAF0FE"/>
+      <path d="M-77 -44L0 0 77 -44M0 0V88" stroke="#CCD9ED" fill="none"/>
+      <text x="0" y="14" text-anchor="middle" font-size="52" class="mono" fill="url(#ink)">&lt;/&gt;</text>
+      <circle cx="-156" cy="84" r="5" fill="#7652C8" class="signal"/>
+      <circle cx="148" cy="-85" r="5" fill="#087E8B" filter="url(#glow)"/>
+      <path d="M173 110v14m-7 -7h14" stroke="#7652C8" stroke-width="1.5"/>
+    </g>
+    <text x="42" y="125" fill="#182941" font-size="76" font-weight="750" letter-spacing="-4">Jspring<tspan fill="#087E8B">.</tspan></text>
+    <text x="44" y="161" class="mono" fill="#536A87" font-size="22">@qihai-coding</text>
+    <text x="42" y="213" fill="#182941" font-size="27" font-weight="600">写点代码，造点世界。</text>
+    <text x="42" y="249" fill="#536A87" font-size="20">游戏 · 前端 · 后端</text>
+    <path d="M42 360H558" stroke="#CCD9ED"/>
+    <path d="M42 360H132" stroke="url(#ink)" stroke-width="2"/>
+    <text x="42" y="387" fill="#536A87" class="mono" font-size="16">从一个想法，到一次提交。</text>
+    <text x="558" y="387" text-anchor="end" fill="#087E8B" class="mono" font-size="15">01 / ∞</text>
+    <rect class="scan" x="0" y="64" width="1" height="295" fill="#087E8B"/>
+  </g>
+  <rect x="1" y="1" width="598" height="408" rx="24" fill="none" stroke="url(#edge)" stroke-opacity=".7"/>
+</svg>
