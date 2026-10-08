@@ -3,50 +3,53 @@
   <source media="(max-width: 600px) and (prefers-color-scheme: light)" srcset="assets/hero-mobile-light.svg">
   <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/hero-light.svg">
-  <img src="assets/hero-dark.svg" width="100%" alt="Jspring / qihai-coding — 写点代码，造点世界。游戏、前端与后端开发记录。">
+  <img src="assets/hero-dark.svg" width="100%" alt="Jspring / qihai-coding — 后端开发 · 实时通信 · 状态同步。保持好奇，持续构建。">
 </picture>
 
-<p align="center"><b>摸鱼归摸鱼，项目还是要做完的。</b></p>
-<p align="center">在游戏世界里打磨体验，在前后端之间连接想法。<br>这里记录我的公开项目，以及它们一点点长大的过程。</p>
-<p align="center"><a href="#user-content-正在构建">正在构建</a> · <a href="#user-content-技术足迹">技术足迹</a> · <a href="#user-content-公开活动">公开活动</a> · <a href="#user-content-贡献轨迹">贡献轨迹</a></p>
+<p align="center"><b>专注后端，把想法写成可运行的系统。</b></p>
+<p align="center">我是 Jspring，主要使用 Go（编程语言）构建后端服务，<br>关注实时通信、联机状态同步与社区系统。这里整理我的公开项目与工程实践。</p>
+<p align="center"><a href="#user-content-代表项目">代表项目</a> · <a href="#user-content-技术栈">技术栈</a> · <a href="#user-content-公开活动">公开活动</a> · <a href="#user-content-贡献轨迹">贡献轨迹</a></p>
 
-## 正在构建
+## 代表项目
 
-### 01 ─ [survivors-online](https://github.com/qihai-coding/survivors-online) · 生存者游戏
+### 01 ─ [go-statesync](https://github.com/qihai-coding/go-statesync) · 联机状态同步库
 
-基于 Unity（游戏引擎）的二维生存者游戏。从角色选择到战斗、升级与掉落，打磨一局完整的游戏循环。
+面向联机游戏的服务器权威状态同步库。通过 QUIC（基于数据报的加密传输协议）传递输入与快照，提供本地预测、权威校正和进程内断线续接。
 
-`角色与关卡`　`技能与成长`　`程序化刷怪`
+`服务器权威`　`预测与校正`　`进程内续接`
 
-[探索项目 →](https://github.com/qihai-coding/survivors-online)　[查看游戏预览 ↗](https://github.com/qihai-coding/survivors-online#预览)
+[查看项目 →](https://github.com/qihai-coding/go-statesync)　[接入指南](https://github.com/qihai-coding/go-statesync/blob/main/docs/INTEGRATION.md)　[发布验收报告](https://github.com/qihai-coding/go-statesync/blob/main/reports/release-v0.2.0/VALIDATION.md)
 
-### 02 ─ [shequ](https://github.com/qihai-coding/shequ) · 技术社区前端
+### 02 ─ [tech-community-api](https://github.com/qihai-coding/tech-community-api) · 社区后端
 
-以 Vue（前端框架）与 TypeScript（类型化脚本语言）构建技术交流社区的交互界面。
+基于 Go（编程语言）与 Gin（后端框架）的技术社区服务。覆盖文章与评论、实时聊天和私信、资源分享与对象存储，并接入外部代码执行服务。
 
-`社区界面`　`内容展示`　`前端实践`
+`内容服务`　`实时通信`　`对象存储`　`代码执行`
 
-[探索项目 →](https://github.com/qihai-coding/shequ)
+[查看项目 →](https://github.com/qihai-coding/tech-community-api)
 
-### 03 ─ [shequ_gin](https://github.com/qihai-coding/shequ_gin) · 社区后端
+### 03 ─ [tech-community-web](https://github.com/qihai-coding/tech-community-web) · 社区前端
 
-使用 Go（编程语言）与 Gin（后端框架），为社区提供服务端能力。
+以 Vue（前端框架）与 TypeScript（类型化脚本语言）构建技术交流社区的交互界面，提供文章阅读与编辑、聊天室、私信、资源分享和在线编程，与社区后端配套使用。
 
-`社区服务`　`接口开发`　`后端实践`
+`社区交互`　`内容编辑`　`在线编程`
 
-[探索项目 →](https://github.com/qihai-coding/shequ_gin)
+[查看项目 →](https://github.com/qihai-coding/tech-community-web)
 
-## 技术足迹
+## 技术栈
 
-在这些公开项目中使用的语言与工具。
+围绕公开项目积累的技术实践：以后端服务与实时通信为主，前端用于配套交互。
 
 <p>
-  <img src="assets/tech-unity.svg" width="160" alt="Unity（游戏引擎）">
-  <img src="assets/tech-csharp.svg" width="160" alt="C#（编程语言）">
-  <img src="assets/tech-vue.svg" width="160" alt="Vue（前端框架）">
-  <img src="assets/tech-typescript.svg" width="205" alt="TypeScript（类型化脚本语言）">
   <img src="assets/tech-go.svg" width="160" alt="Go（编程语言）">
   <img src="assets/tech-gin.svg" width="160" alt="Gin（后端框架）">
+  <img src="assets/tech-quic.svg" width="160" alt="QUIC（加密传输协议）">
+  <img src="assets/tech-mysql.svg" width="160" alt="MySQL（关系型数据库）">
+  <img src="assets/tech-minio.svg" width="160" alt="MinIO（对象存储）">
+</p>
+<p>
+  <img src="assets/tech-vue.svg" width="160" alt="Vue（前端框架）">
+  <img src="assets/tech-typescript.svg" width="205" alt="TypeScript（类型化脚本语言）">
 </p>
 
 ## 公开活动
@@ -66,7 +69,7 @@
 
 ## 贡献轨迹
 
-每一格都是一点进展，慢慢吃掉，慢慢长大。
+每一格，记录一次持续构建。
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/generated/snake-dark.svg">
@@ -74,7 +77,7 @@
   <img src="assets/generated/snake-dark.svg" width="100%" alt="依据 qihai-coding 真实贡献日历生成的贪吃蛇动画。">
 </picture>
 
-<p align="center"><sub>保持好奇，继续构建。<br>摸鱼片刻，下次提交见。</sub></p>
+<p align="center"><sub>保持好奇，持续构建。</sub></p>
 
 <details>
 <summary>关于数据更新与素材</summary>

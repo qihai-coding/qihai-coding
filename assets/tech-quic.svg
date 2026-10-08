@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="54" viewBox="0 0 160 54" role="img" aria-label="QUIC（加密传输协议）">
+  <rect x=".5" y=".5" width="159" height="53" rx="10" fill="#101A2C" stroke="#2A3951"/>
+  <rect x="10" y="11" width="32" height="32" rx="8" fill="#62E8E4" fill-opacity=".12"/>
+  <path d="M17 23h18m-5-5 5 5-5 5M35 33H17m5-5-5 5 5 5" fill="none" stroke="#62E8E4" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="53" y="24" font-family="Segoe UI,sans-serif" font-size="15" font-weight="600" fill="#62E8E4">QUIC</text>
+  <text x="53" y="41" font-family="Segoe UI,Microsoft YaHei,sans-serif" font-size="11" fill="#ADBBD2">加密传输协议</text>
+</svg>
