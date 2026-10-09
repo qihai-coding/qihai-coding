@@ -6,51 +6,7 @@
   <img src="assets/hero-dark.svg" width="100%" alt="Jspring / qihai-coding — 后端开发 · 实时通信 · 状态同步。保持好奇，持续构建。">
 </picture>
 
-<p align="center"><b>专注后端，把想法写成可运行的系统。</b></p>
-<p align="center">我是 Jspring，主要使用 Go（编程语言）构建后端服务，<br>关注实时通信、联机状态同步与社区系统。这里整理我的公开项目与工程实践。</p>
-<p align="center"><a href="#user-content-代表项目">代表项目</a> · <a href="#user-content-技术栈">技术栈</a> · <a href="#user-content-公开活动">公开活动</a> · <a href="#user-content-贡献轨迹">贡献轨迹</a></p>
-
-## 代表项目
-
-### 01 ─ [go-statesync](https://github.com/qihai-coding/go-statesync) · 联机状态同步库
-
-面向联机游戏的服务器权威状态同步库。通过 QUIC（基于数据报的加密传输协议）传递输入与快照，提供本地预测、权威校正和进程内断线续接。
-
-`服务器权威`　`预测与校正`　`进程内续接`
-
-[查看项目 →](https://github.com/qihai-coding/go-statesync)　[接入指南](https://github.com/qihai-coding/go-statesync/blob/main/docs/INTEGRATION.md)　[发布验收报告](https://github.com/qihai-coding/go-statesync/blob/main/reports/release-v0.2.0/VALIDATION.md)
-
-### 02 ─ [tech-community-api](https://github.com/qihai-coding/tech-community-api) · 社区后端
-
-基于 Go（编程语言）与 Gin（后端框架）的技术社区服务。覆盖文章与评论、实时聊天和私信、资源分享与对象存储，并接入外部代码执行服务。
-
-`内容服务`　`实时通信`　`对象存储`　`代码执行`
-
-[查看项目 →](https://github.com/qihai-coding/tech-community-api)
-
-### 03 ─ [tech-community-web](https://github.com/qihai-coding/tech-community-web) · 社区前端
-
-以 Vue（前端框架）与 TypeScript（类型化脚本语言）构建技术交流社区的交互界面，提供文章阅读与编辑、聊天室、私信、资源分享和在线编程，与社区后端配套使用。
-
-`社区交互`　`内容编辑`　`在线编程`
-
-[查看项目 →](https://github.com/qihai-coding/tech-community-web)
-
-## 技术栈
-
-围绕公开项目积累的技术实践：以后端服务与实时通信为主，前端用于配套交互。
-
-<p>
-  <img src="assets/tech-go.svg" width="160" alt="Go（编程语言）">
-  <img src="assets/tech-gin.svg" width="160" alt="Gin（后端框架）">
-  <img src="assets/tech-quic.svg" width="160" alt="QUIC（加密传输协议）">
-  <img src="assets/tech-mysql.svg" width="160" alt="MySQL（关系型数据库）">
-  <img src="assets/tech-minio.svg" width="160" alt="MinIO（对象存储）">
-</p>
-<p>
-  <img src="assets/tech-vue.svg" width="160" alt="Vue（前端框架）">
-  <img src="assets/tech-typescript.svg" width="205" alt="TypeScript（类型化脚本语言）">
-</p>
+<p align="center"><b>Go（编程语言）后端开发，关注实时通信与状态同步。</b></p>
 
 ## 公开活动
 
@@ -86,6 +42,6 @@
 
 - [查看更新状态](https://github.com/qihai-coding/qihai-coding/actions/workflows/profile.yml)
 - [统计生成器](https://github.com/stats-organization/github-readme-stats-action) · [贡献动画生成器](https://github.com/Platane/snk)
-- 横幅与技术标签为本主页定制的 SVG（可缩放矢量图）；横幅支持系统的减少动态效果设置。
+- 横幅为本主页定制的 SVG（可缩放矢量图），支持系统的减少动态效果设置。
 
 </details>
