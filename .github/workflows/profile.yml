@@ -2,7 +2,7 @@ name: 更新主页动态素材
 
 on:
   schedule:
-    - cron: '17 1 * * *' # 每天北京时间 09:17，实际启动可能排队。
+    - cron: '0 * * * *' # 每小时整点，实际启动可能排队。
   workflow_dispatch:
 
 permissions:
